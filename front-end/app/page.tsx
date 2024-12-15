@@ -8,6 +8,7 @@ import ContactForm from "./components/contactFrom";
 import Slider from "./components/slider";
 import { fetchProjects } from "./services/api"; // Import de la fonction API
 import Loader from "./components/loader"; // Import du composant Loader
+import Image from 'next/image';
 
 // Définir une interface pour le type des projets
 interface Project {
@@ -64,7 +65,7 @@ export default function Home() {
           <div className="relative z-10 flex flex-col md:flex-row items-center bg-white/80 backdrop-blur-md rounded-xl shadow-lg p-8 md:p-12 gap-8 max-w-5xl animate-fade-in-y">
             {/* Image de présentation */}
             <div className="flex-shrink-0">
-              <img
+              <Image
                 src="/presentation_me.png"
                 alt="Photo d'Elsa"
                 className="w-64 h-64 rounded-full object-cover shadow-lg border-4 border-[#b97a57] hover:scale-105 transition-transform duration-300"

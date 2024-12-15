@@ -25,7 +25,7 @@ function ContactForm() {
       await sendContactMessage(formData.name, formData.email, formData.message);
       setSuccessMessage("Votre message a été envoyé avec succès !");
       setFormData({ name: "", email: "", message: "" });
-    } catch (error) {
+    } catch {
       setErrorMessage("Une erreur est survenue. Veuillez réessayer.");
     }
   };
